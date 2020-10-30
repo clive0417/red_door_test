@@ -10,6 +10,9 @@ use App\Http\Requests\StoreBlogPost;
 use App\Category;
 use App\Http\Requests\StoreCategory;
 use App\Tag;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Collection;
+use App\Explorerecord;
 
 class PostController extends Controller
 {
@@ -110,7 +113,28 @@ class PostController extends Controller
     public function show(Post $post) 
     {   
         $prevPost=Post::where('id','<',$post->id)->max('id');// 找小於現在id[$post->id] 的最大id
-        $nextPost=Post::where('id','>',$post->id)->min('id');;
+        $nextPost=Post::where('id','>',$post->id)->min('id');
+        $post->viewcount = $post->viewcount +1;
+        $post->save();
+        $header=apache_request_headers();
+        $headercollect=collect($header);
+        $headerjson=$headercollect->tojson();
+        $headerjsonencode=json_encode($header);
+        Log::info($_SERVER);
+        Log::info($headerjsonencode);
+        $explorerecord= new Explorerecord;
+        $explorerecord->post_id=$post->id;
+        $explorerecord->ip=$_SERVER['REMOTE_ADDR'];
+        $explorerecord->UA=$_SERVER['HTTP_USER_AGENT'];
+        $explorerecord->header=$headerjsonencode;
+        $explorerecord->save();
+
+
+// IP ->$_SERVER['REMOTE_ADDR']
+// 'UA->' .$_SERVER["HTTP_USER_AGENT"]
+
+
+
 
         return view('posts.show',['post'=>$post,'prevPost'=>$prevPost,'nextPost'=>$nextPost]);
 

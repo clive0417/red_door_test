@@ -11,7 +11,9 @@
     <title>Blog</title>
 
     <!--common style-->
-    <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
+    <link
+        href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200'
+        rel='stylesheet' type='text/css'>
 
     <!-- inject:css -->
     <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -26,6 +28,9 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/default-theme.css">
     <link rel="stylesheet" href="/css/frontend.css">
+    {{-- google recaptcha 2.0 api $configuration--}}
+    {!! htmlScriptTagJsApi() !!}
+
 
     <!-- endinject -->
 

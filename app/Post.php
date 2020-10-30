@@ -39,4 +39,9 @@ class Post extends Model
         return $this->hasMany('App\Comment');
 
     }
+    public function explorerecords() 
+    {
+        return $this->hasMany('App\Comment');
+
+    }
 }
