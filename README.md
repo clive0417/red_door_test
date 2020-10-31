@@ -1,11 +1,11 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# For interview use 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+1.	會員登入/註冊系統 
+使用 laravel 的 Authentication 功能鍵立
+2. 會員註冊加入 google  reCAPTCHA 驗證碼機制
+使用第三方套件 Laravel ReCAPTCHA 使用 v2版驗證
+3. php artisan console 指令基本會員帳號
+指令為
 
 ## About Laravel
 
