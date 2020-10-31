@@ -5,7 +5,7 @@
 2. 會員註冊加入 google  reCAPTCHA 驗證碼機制
 使用第三方套件 Laravel ReCAPTCHA 使用 v2版驗證
 3. php artisan console 指令基本會員帳號
-指令為
+指令為 php artisan command:MakeAccount {name} {email} {password} {password-confirm}
 
 ## About Laravel
 
