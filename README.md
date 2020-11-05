@@ -9,6 +9,8 @@
 4. 新增欄位，以及DB diagram 在右側網址中
 https://dbdiagram.io/d/5f9d05dd3a78976d7b79ea93
 
+5.CMD 後臺網址 localhost/admin 
+
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
